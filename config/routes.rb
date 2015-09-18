@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   } 
   resources :statuses 
   root to: 'statuses#index' 
-  
+  end
   # devise_for :users
   # resources :statuses
   # root to: 'statuses#index'
@@ -62,4 +62,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+
