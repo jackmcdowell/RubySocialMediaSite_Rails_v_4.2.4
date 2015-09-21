@@ -1,6 +1,7 @@
 class StatusesController < ApplicationController
   # GET /statuses
   # GET /statuses.json
+
   def index
     @statuses = Status.all
 
@@ -40,7 +41,9 @@ class StatusesController < ApplicationController
   # POST /statuses
   # POST /statuses.json
   def create
-    @status = Status.new(params[:status].permit(:status, :statuses))
+  @status = Status.new(status_params)
+  #   @status = Status.new(status_params[:status].permit(:status, :statuses))
+  #   @status = Status.new(params[:status].permit(:status, :statuses))
 
     respond_to do |format|
       if @status.save
@@ -81,7 +84,11 @@ class StatusesController < ApplicationController
     end
   end
 end
+  private
 
+    def status_params
+      params.require(:status).permit(:user_id, :content)
+    end
 # class StatusesController < ApplicationController
 #   before_action :set_status, only: [:show, :edit, :update, :destroy]
 
