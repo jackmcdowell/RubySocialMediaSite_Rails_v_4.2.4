@@ -1,28 +1,6 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+To set up this application all that needs to be done is clone the repository and run rake db:migrate.
+Then rails can be ran and everything should work.
+Routes are incomplete so users need to be created at /users/sign_up before any posting is allowed, or things will likely break.
+This is a demo program / work in progress.
